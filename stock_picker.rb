@@ -1,14 +1,13 @@
 def stock_picker(stock_array)
-    array_length = stock_array.length
     x, buy, margin, sell = 0, 0, 0, 0
     
-    while x < array_length
+    while x < stock_array.length
         check_to_buy = stock_array.shift
         stock_array.each do |check_to_sell|
             if((check_to_sell - check_to_buy ) > margin)
                 sell = check_to_sell
                 buy = check_to_buy
-                margin = (might_sell - check_to_buy)
+                margin = (check_to_sell - check_to_buy)
             end
         end
         x += 1
