@@ -16,20 +16,20 @@ def caesar_cipher(text, shiftvalue)
         end
     end
 
-    print return_array
+    return_array.join
 end
 
 def get_index(range, char, shiftvalue)
     index = range.index(char) + shiftvalue
-    if(index > 26)
+    if(index > 25)
         index = index - 26
     else
         index
     end
 end
  
-caesar_cipher("Hello World!", 4)
+p caesar_cipher("Hello World!", 4)
 puts " "
-caesar_cipher("ABCabc", 27)
+p caesar_cipher("ABCabc", 27)
 puts " "
-caesar_cipher("What a string!", 5)
+p caesar_cipher("What a string!", 5)
